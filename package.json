@@ -1,0 +1,24 @@
+{
+  "name": "checkhashstream",
+  "version": "0.0.1",
+  "description": "Writable stream that check the contents written against a hash",
+  "main": "checkhashstream.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gizur/checkhashstream.git"
+  },
+  "keywords": [
+    "streams",
+    "hash",
+    "caching"
+  ],
+  "author": "Jonas Colmsjö",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gizur/checkhashstream/issues"
+  },
+  "homepage": "https://github.com/gizur/checkhashstream#readme"
+}
