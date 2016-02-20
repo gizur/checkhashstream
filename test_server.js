@@ -27,14 +27,18 @@ server.on('request', function (req, res) {
   req.on('end', function () {
     log('end in request');
 
-    if (!ws.get()) {
+    var result = ws.get();
+    debug(result);
+    
+    if (result.match) {
       debug('NOT MODIFIED')
       res.writeHead(304);
       res.end();
       return;
     }
 
-    res.end(ws.get());
+    res.setHeader('etag', result.newHash);
+    res.end(result.buffer.toString());
   });
 
   res.on('finish', function () {

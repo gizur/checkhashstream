@@ -46,7 +46,13 @@ WS.prototype.get = function () {
   if (!this.newHash)
     this.newHash = this.hash.digest(this.options.hashDigest).toString();
 
-  return (this.newHash === this.oldHash) ? false : this.buffer;
+  return {
+    match: (this.newHash === this.oldHash),
+    newHash: this.newHash,
+    oldHash: this.oldHash,
+    buffer: this.buffer
+  };
+
 };
 
 module.exports = WS;

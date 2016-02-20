@@ -1,6 +1,6 @@
 {
   "name": "checkhashstream",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Writable stream that check the contents written against a hash",
   "main": "checkhashstream.js",
   "scripts": {
